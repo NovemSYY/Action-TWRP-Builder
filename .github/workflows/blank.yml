@@ -33,9 +33,7 @@ jobs:
     
     - name: Download boot or recovery img
       run: |
-        # aria2c ${{ github.event.inputs.IMG_URL }}
-        tar xvJf img.tar.xz
-        ls
+        wget ${{ github.event.inputs.IMG_URL }}
       
     - name: Start build
       run: |
